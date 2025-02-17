@@ -3,7 +3,6 @@ import { Wallet } from 'lucide-react';
 import { MetaMaskSDK } from '@metamask/sdk';
 import { PhantomWalletAdapter } from '@solana/wallet-adapter-phantom';
 
-
 const MMSDK = new MetaMaskSDK();
 const ethereum = MMSDK.getProvider();
 const phantomWallet = new PhantomWalletAdapter();
@@ -54,11 +53,10 @@ function WalletConnect() {
             >
               Phantom
             </button>
-            <WalletKitProvider>
-              <button
-                className="w-full px-4 py-2 text-left hover:bg-gray-50 rounded-md"
-              >
-               
+          </div>
+        </div>
+      )}
+      
       {address && (
         <div className="mt-2 text-sm text-gray-600">
           {address.slice(0, 6)}...{address.slice(-4)}
